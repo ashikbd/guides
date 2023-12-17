@@ -33,7 +33,7 @@ creating instance. Allow ssl, http, https traffic in network settings.
 
 To connect instance from any ssh client, use following command:
 
-ssh -i \"\<filename\>.pem@\<public ip or public dns\>
+```ssh -i \"\<filename\>.pem@\<public ip or public dns\>```
 
 If public IP doesn't load in browser, it is better to use elastic ip.
 
@@ -45,7 +45,7 @@ sudo apt upgrade
 
 sudo apt install nginx
 
-### Install PHP
+### 3. Install PHP
 
 sudo apt install ca-certificates apt-transport-https
 software-properties-common
@@ -63,14 +63,14 @@ php8.1-bcmath php8.1-zip php8.1-curl unzip php8.1-gd
 
 sudo systemctl restart nginx.service
 
-### Install Composer
+### 4. Install Composer
 
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 
 sudo php composer-setup.php \--install-dir=/usr/local/bin
 \--filename=composer
 
-### Install Node
+### 5. Install Node
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh
 \| bash
@@ -79,7 +79,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh
 
 nvm install \--lts
 
-### Install MySQL
+### 6. Install MySQL
 
 sudo apt update
 
@@ -90,7 +90,7 @@ sudo mysql
 ALTER USER \'root\'@\'localhost\' IDENTIFIED WITH mysql_native_password
 BY \'your password\';
 
-### Install PHPMyAdmin
+### 7. Install PHPMyAdmin
 
 sudo apt update
 
@@ -144,7 +144,7 @@ root /var/www/html;
 
 }
 
-### Clone GitHub
+### 8. Clone GitHub
 
 sudo apt update
 
@@ -170,7 +170,7 @@ sudo mv \<git folder name\> mydomain.com
 
 sudo chown ubuntu:ubuntu -R mydomain.com
 
-### Setup Domain and Subdomains and change nginx config
+### 9. Setup Domain and Subdomains and change nginx config
 
 Setup cname, A record for domain name and also create a subdomain for
 backend using another A record. Eg. backend.mydomain.com
@@ -249,7 +249,7 @@ root /var/www/vhosts/mydomain.com/frontend/dist;
 
 sudo service nginx restart
 
-### Prepare Laravel Project
+### 10. Prepare Laravel Project
 
 cd /var/www/vhosts/mydomain.com/backend
 
@@ -267,13 +267,13 @@ sudo php artisan key:generate
 
 php artisan migrate
 
-### Prepare Vue.js Project
+### 11. Prepare Vue.js Project
 
 It is better to build project locally using npm run build or vite build
 command (if using vite). We have set nginx root folder path to 'dist'
 folder in step 9 above. It should be enough to load the site
 
-### Setup SSL
+### 12. Setup SSL
 
 sudo snap install core;
 
