@@ -50,7 +50,8 @@ Execute the following command to a install a few prerequisites and Ondrej PHP re
 
 ```sudo apt install ca-certificates apt-transport-https
 software-properties-common
-sudo add-apt-repository ppa:ondrej/php```
+sudo add-apt-repository ppa:ondrej/php
+```
 
 Install PHP 
 
@@ -93,7 +94,8 @@ sudo apt install mysql-server
 ```
 Then run musql command and use following query to change root password
 
-```sudo mysql
+```
+sudo mysql
 ALTER USER \'root\'@\'localhost\' IDENTIFIED WITH mysql_native_password BY \'your password\';
 ```
 
