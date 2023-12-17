@@ -40,10 +40,9 @@ If public IP doesn't load in browser, it is better to use elastic ip.
 ### 2. Install Nginx web server
 
 ```sudo apt update
-
 sudo apt upgrade
-
-sudo apt install nginx```
+sudo apt install nginx
+```
 
 ### 3. Install PHP
 
@@ -58,9 +57,9 @@ Install PHP
 ```
 sudo apt update
 sudo apt upgrade
-
 sudo apt install php8.1 -y
 ```
+
 Install required PHP extensions
 
 ```
