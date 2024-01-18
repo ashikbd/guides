@@ -33,7 +33,7 @@ creating instance. Allow ssl, http, https traffic in network settings.
 
 To connect instance from any ssh client, use following command:
 
-```ssh -i \"\<filename\>.pem@\<public ip or public dns\>```
+```ssh -i "<filename\>.pem@<public ip or public dns\>"```
 
 If public IP doesn't load in browser, it is better to use elastic ip.
 
@@ -73,18 +73,18 @@ sudo systemctl restart nginx.service
 ### 4. Install Composer
 ```
 curl -sS https://getcomposer.org/installer -o composer-setup.php
-sudo php composer-setup.php \--install-dir=/usr/local/bin
-\--filename=composer
+sudo php composer-setup.php --install-dir=/usr/local/bin
+--filename=composer
 ```
 
 ### 5. Install Node
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh
-\| bash
+| bash
 
-. \~/.nvm/nvm.sh
+. ~/.nvm/nvm.sh
 
-nvm install \--lts
+nvm install --lts
 ```
 
 ### 6. Install MySQL
@@ -92,11 +92,11 @@ nvm install \--lts
 sudo apt update
 sudo apt install mysql-server
 ```
-Then run musql command and use following query to change root password
+Then run mysql command and use following query to change root password
 
 ```
 sudo mysql
-ALTER USER \'root\'@\'localhost\' IDENTIFIED WITH mysql_native_password BY \'your password\';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your password';
 ```
 
 ### 7. Install PHPMyAdmin
@@ -107,7 +107,7 @@ sudo apt install phpmyadmin
 sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 ```
 
-\- Check Permissions:
+- Check Permissions:
 
 ```
 sudo chown -R www-data:www-data /var/www/html/phpmyadmin
@@ -160,8 +160,8 @@ app through https.
 
 ```
 cd /var/www/vhosts
-sudo git clone \<git url\>
-sudo mv \<git folder name\> mydomain.com
+sudo git clone <git url>
+sudo mv <git folder name> mydomain.com
 sudo chown ubuntu:ubuntu -R mydomain.com
 ```
 
@@ -284,11 +284,11 @@ sudo snap install core;
 
 sudo snap refresh core
 
-sudo snap install \--classic certbot
+sudo snap install --classic certbot
 
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
-sudo certbot \--nginx -d mydomain.com -d www.mydomain.com -d
+sudo certbot --nginx -d mydomain.com -d www.mydomain.com -d
 backend.mydomain.com
 ```
 
@@ -298,5 +298,5 @@ sudo systemctl status certbot.timer
 ```
 We can also simulate the renewal process:
 ```
-sudo certbot renew \--dry-run
+sudo certbot renew --dry-run
 ```
